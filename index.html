@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>جهان‌نما | دانستنی‌های شگفت‌انگیز</title>
+
+<meta name="description" content="دانستنی‌های جالب درباره فضا، حیوانات، کشورها، تاریخ و فناوری">
+
+<style>
+
+body{
+font-family:tahoma,Arial;
+margin:0;
+background:#f3f6fa;
+color:#333;
+}
+
+header{
+background:#123b75;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+header h1{
+font-size:40px;
+margin:0;
+}
+
+nav{
+background:white;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+margin:8px;
+text-decoration:none;
+color:#123b75;
+font-weight:bold;
+}
+
+
+main{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+
+.search{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+
+input{
+width:90%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+}
+
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 3px 10px #ddd;
+}
+
+
+.card h2{
+color:#123b75;
+}
+
+
+button{
+background:#123b75;
+color:white;
+border:0;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+
+.more{
+display:none;
+line-height:2;
+margin-top:15px;
+}
+
+
+footer{
+text-align:center;
+padding:25px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>🌍 جهان‌نما</h1>
+
+<p>
+دانستنی‌هایی که دنیا را بهتر بشناسید
+</p>
+
+</header>
+
+
+<nav>
+
+<a href="#">همه</a>
+<a href="#">فضا</a>
+<a href="#">حیوانات</a>
+<a href="#">کشورها</a>
+<a href="#">تاریخ</a>
+<a href="#">فناوری</a>
+
+</nav>
+
+
+<main>
+
+
+<div class="search">
+
+<h2>🔎 جستجو</h2>
+
+<input type="text" placeholder="جستجوی دانستنی..." onkeyup="search()">
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h2>🚀 بزرگ‌ترین سیاره منظومه شمسی</h2>
+
+<p>درباره مشتری بیشتر بدانید.</p>
+
+<button onclick="show(1)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m1">
+
+مشتری بزرگ‌ترین سیاره منظومه شمسی است.
+این سیاره بیشتر از گاز تشکیل شده و دارای طوفان‌های بسیار بزرگی است.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🌌 سیاه‌چاله چیست؟</h2>
+
+<p>یکی از عجیب‌ترین پدیده‌های جهان.</p>
+
+<button onclick="show(2)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m2">
+
+سیاه‌چاله ناحیه‌ای از فضا است که گرانش بسیار زیادی دارد و حتی نور نمی‌تواند از آن فرار کند.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🌙 ماه چگونه به وجود آمد؟</h2>
+
+<p>داستان شکل‌گیری ماه زمین.</p>
+
+<button onclick="show(3)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m3">
+
+دانشمندان معتقدند ماه احتمالاً پس از برخورد یک جرم بزرگ با زمین اولیه شکل گرفته است.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>⭐ بزرگ‌ترین ستاره شناخته شده</h2>
+
+<p>ستاره‌های غول‌پیکر جهان.</p>
+
+<button onclick="show(4)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m4">
+
+برخی ستاره‌ها هزاران برابر بزرگ‌تر از خورشید هستند و اندازه‌های بسیار عظیمی دارند.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🐋 بزرگ‌ترین حیوان زمین</h2>
+
+<p>غول اقیانوس‌ها.</p>
+
+<button onclick="show(5)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m5">
+
+نهنگ آبی بزرگ‌ترین حیوان شناخته شده روی زمین است و طول آن می‌تواند به بیش از ۳۰ متر برسد.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🐆 سریع‌ترین حیوان دنیا</h2>
+
+<p>قهرمان سرعت در طبیعت.</p>
+
+<button onclick="show(6)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m6">
+
+یوزپلنگ سریع‌ترین حیوان خشکی است و می‌تواند در زمان کوتاه سرعت بسیار زیادی بگیرد.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🦈 حیوانات عجیب اقیانوس</h2>
+
+<p>دنیای ناشناخته زیر آب.</p>
+
+<button onclick="show(7)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m7">
+
+در اعماق اقیانوس‌ها موجوداتی زندگی می‌کنند که ظاهر و رفتار بسیار متفاوتی دارند و هنوز بخش‌هایی از اقیانوس ناشناخته است.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🦍 باهوش‌ترین حیوانات</h2>
+
+<p>هوش در دنیای حیوانات.</p>
+
+<button onclick="show(8)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m8">
+
+برخی جانوران مانند شامپانزه‌ها، دلفین‌ها و کلاغ‌ها توانایی حل مسئله و یادگیری دارند.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🌎 بزرگ‌ترین کشور جهان</h2>
+
+<p>اطلاعات جالب کشورها.</p>
+
+<button onclick="show(9)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m9">
+
+روسیه بزرگ‌ترین کشور جهان از نظر مساحت است و در دو قاره اروپا و آسیا قرار دارد.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🇯🇵 ژاپن</h2>
+
+<p>کشوری با فناوری پیشرفته.</p>
+
+<button onclick="show(10)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m10">
+
+ژاپن به دلیل فناوری، فرهنگ خاص و پیشرفت صنعتی در جهان شناخته شده است.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🇧🇷 برزیل</h2>
+
+<p>سرزمین جنگل‌های بزرگ.</p>
+
+<button onclick="show(11)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m11">
+
+برزیل بزرگ‌ترین کشور آمریکای جنوبی است و جنگل آمازون بخش مهمی از آن را پوشش می‌دهد.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🇨🇦 کانادا</h2>
+
+<p>کشوری با طبیعت گسترده.</p>
+
+<button onclick="show(12)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m12">
+
+کانادا یکی از بزرگ‌ترین کشورهای جهان است و به دریاچه‌ها و طبیعت وسیعش معروف است.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🏛️ تمدن مصر باستان</h2>
+
+<p>یکی از قدیمی‌ترین تمدن‌های جهان.</p>
+
+<button onclick="show(13)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m13">
+
+مصر باستان به خاطر اهرام، خط هیروگلیف و پیشرفت‌های علمی خود مشهور است.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🏯 دیوار چین</h2>
+
+<p>سازه‌ای تاریخی و بزرگ.</p>
+
+<button onclick="show(14)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m14">
+
+دیوار بزرگ چین مجموعه‌ای از دیوارها و سازه‌های دفاعی است که در طول تاریخ ساخته شده‌اند.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>💻 هوش مصنوعی چیست؟</h2>
+
+<p>فناوری آینده.</p>
+
+<button onclick="show(15)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m15">
+
+هوش مصنوعی به سیستم‌هایی گفته می‌شود که می‌توانند بعضی کارهای شبیه هوش انسانی مانند یادگیری و تحلیل را انجام دهند.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🌐 تاریخ اینترنت</h2>
+
+<p>شبکه‌ای که دنیا را تغییر داد.</p>
+
+<button onclick="show(16)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m16">
+
+اینترنت از پروژه‌های تحقیقاتی شروع شد و امروزه یکی از مهم‌ترین ابزارهای ارتباطی جهان است.
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🤖 ربات‌ها</h2>
+
+<p>آینده فناوری.</p>
+
+<button onclick="show(17)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m17">
+
+ربات‌ها در صنایع، پزشکی و بسیاری از بخش‌های زندگی انسان استفاده می‌شوند.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>☀️ چرا خورشید می‌درخشد؟</h2>
+
+<p>راز انرژی ستاره ما.</p>
+
+<button onclick="show(18)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m18">
+خورشید با واکنش‌های هسته‌ای در مرکز خود انرژی تولید می‌کند و این انرژی به شکل نور و گرما به زمین می‌رسد.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🔴 آیا در مریخ آب وجود دارد؟</h2>
+
+<p>بررسی سیاره سرخ.</p>
+
+<button onclick="show(19)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m19">
+دانشمندان نشانه‌هایی از یخ آب و وجود آب در گذشته مریخ پیدا کرده‌اند.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🌌 کهکشان چیست؟</h2>
+
+<p>ساختار عظیم جهان.</p>
+
+<button onclick="show(20)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m20">
+کهکشان مجموعه‌ای بسیار بزرگ از ستاره‌ها، گاز، گرد و غبار و ماده تاریک است.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>⭐ چند ستاره در جهان وجود دارد؟</h2>
+
+<p>تعداد ستارگان بی‌شمار است.</p>
+
+<button onclick="show(21)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m21">
+دانشمندان تخمین می‌زنند میلیاردها کهکشان وجود دارد که هر کدام شامل میلیاردها ستاره هستند.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>👨‍🚀 چرا فضانوردان لباس مخصوص دارند؟</h2>
+
+<p>محافظت در فضا.</p>
+
+<button onclick="show(22)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m22">
+لباس فضانوردان از آن‌ها در برابر نبود هوا، تغییرات دما و شرایط سخت فضا محافظت می‌کند.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🌍 نزدیک‌ترین سیاره به زمین</h2>
+
+<p>همسایه‌های منظومه شمسی.</p>
+
+<button onclick="show(23)">
+ادامه مطلب
+</button>
+
+<div class="more" id="m23">
+سیاره زهره معمولاً یکی از نزدیک‌ترین همسایه‌های سیاره‌ای زمین محسوب می‌شود.
+
+</div>
+
+</main>
+
+
+
+<footer>
+
+<p>
+© 2026 جهان‌نما | دانستنی‌های جهان
+</p>
+
+</footer>
+
+
+
+<script>
+
+function show(x){
+
+let item=document.getElementById("m"+x);
+
+if(item.style.display=="block"){
+
+item.style.display="none";
+
+}
+
+else{
+
+item.style.display="block";
+
+}
+
+}
+
+
+
+function search(){
+
+let input=document.querySelector("input").value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+
+cards.forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+
+if(text.includes(input)){
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+
+});
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
